@@ -37,7 +37,13 @@ alias reloadagent="gpgconf --kill gpg-agent && gpg-connect-agent reloadagent /by
 
 alias stripelisten="stripe listen --forward-to localhost:4000/webhooks/stripe"
 
-export PATH="/opt/homebrew/opt/dotnet@6/bin:/Users/jasonnoonan/.dotnet:$PATH"
+# use exa for ls
+alias ls='exa -a --icons --color=always --group-directories-first'
+alias la='exa -al --icons --color=always --group-directories-first'
+alias ll='exa -l --icons --color=always --group-directories-first'
+alias lt='exa -aT --icons --color=always --group-directories-first'
+
+export PATH="$HOME/.local/bin:/opt/homebrew/opt/dotnet@6/bin:/Users/jasonnoonan/.dotnet:$PATH"
 export ASPNETCORE_ENVIRONMENT="Development"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -49,4 +55,6 @@ export GPG_TTY=$(tty)
 if [[ -n "$SSH_CONNECTION" ]] ;then
   export PINENTRY_USER_DATA="USE_CURSES=1"
 fi
+
+export MANPAGER="nvim +Man!"
 tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"

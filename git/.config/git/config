@@ -1,0 +1,22 @@
+[user]
+	email = jason.noonan@pdq.com
+	name = Jason Noonan
+	signingkey = FF0655F5DD136EECF370F8B63FE5B7B6401C81A5
+[commit]
+	gpgsign = true
+	verbose = true
+[tag]
+	gpgsign = true
+[alias]
+	amend = commit --amend --no-edit
+	co = checkout
+	cob = checkout -b
+	force = push --force-with-lease
+	gap = commit -a --amend --no-edit && git push --force-with-lease
+	s = status
+[pull]
+	rebase = false
+[core]
+	editor = nvim
+[status]
+	showUntrackedFiles = all

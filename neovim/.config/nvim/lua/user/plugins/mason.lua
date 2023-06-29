@@ -11,25 +11,23 @@ return {
         "lua_ls",
         "yamlls",
         "html",
-        "hls",
       },
     },
   },
   {
     "jay-babu/mason-null-ls.nvim",
-    opts = {
-      ensure_installed = { "prettierd", "eslint_d", "stylua", "eslint-lsp", "rustfmt" },
-    },
-    config = function(_, opts)
+    config = function()
       local mason_null_ls = require "mason-null-ls"
       local null_ls = require "null-ls"
-      mason_null_ls.setup(opts)
-      mason_null_ls.setup_handlers {
-        prettierd = function()
-          null_ls.register(
-            null_ls.builtins.formatting.prettierd.with { extra_filetypes = { "markdown", "rmd", "qmd" } }
-          )
-        end,
+      mason_null_ls.setup {
+        ensure_installed = { "prettierd", "eslint_d", "stylua", "eslint-lsp", "rustfmt" },
+        handlers = {
+          prettierd = function()
+            null_ls.register(
+              null_ls.builtins.formatting.prettierd.with { extra_filetypes = { "markdown", "rmd", "qmd" } }
+            )
+          end,
+        },
       }
     end,
   },
