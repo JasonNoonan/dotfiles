@@ -5,6 +5,9 @@
 [commit]
 	gpgsign = true
 	verbose = true
+[core]
+	editor = nvim
+	excludesFile = ~/.config/git/gitignore
 [tag]
 	gpgsign = true
 [alias]
@@ -16,7 +19,5 @@
 	s = status
 [pull]
 	rebase = false
-[core]
-	editor = nvim
 [status]
 	showUntrackedFiles = all
