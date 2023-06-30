@@ -3,9 +3,6 @@ export ASPNETCORE_ENVIRONMENT="Development"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-export SENDGRID_API_KEY="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"
-export STRIPE_API_KEY="sk_test_51LnOD4KVm4WHjNVwUkUZ2onqpLTrCYtS0LmfMJgpUlxSpz2cbAhlMUmsyIKlDj2UWL8x3lhyh5NbYOvsYdF4u3zA00MdftS3MC"
-
 export GPG_TTY=$(tty)
 if [[ -n "$SSH_CONNECTION" ]] ;then
   export PINENTRY_USER_DATA="USE_CURSES=1"
