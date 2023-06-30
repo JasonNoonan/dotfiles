@@ -12,6 +12,7 @@ return {
         dap = { enabled = true, enable_ui = true },
         mason = true,
         neotree = true,
+        noice = true,
         notify = true,
         sandwich = true,
         semantic_tokens = true,
@@ -166,6 +167,60 @@ return {
       { "<leader>t<backspace>", "<cmd>A<cr>", { description = "jump to test from source file or viceversa" } },
     },
     event = "VeryLazy",
+  },
+  {
+    "tpope/vim-dadbod",
+    dependencies = {
+      "kristijanhusak/vim-dadbod-ui",
+      "kristijanhusak/vim-dadbod-completion",
+    },
+    init = function()
+      vim.g.db_ui_use_nerd_fonts = true
+      vim.g.db_ui_execute_on_save = false
+      vim.g.db_ui_save_location = "./json_queries"
+      vim.g.db_ui_disable_mappings = false
+      vim.g.db_url = os.getenv "DBUI_URL"
+    end,
+    cmd = {
+      "DBUI",
+    },
+    keys = {
+      {
+        "<leader><leader>r",
+        ":normal vip<CR><PLUG>(DBUI_ExecuteQuery)",
+        { description = "run the sql query (dadbod)" },
+      },
+      {
+        "<leader><leader>d",
+        "<cmd>DBUI<cr>",
+        { description = "start the dadbod UI" },
+      },
+    },
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    config = {
+      lsp = {
+        signature = {
+          enabled = false,
+        },
+        hover = {
+          enabled = false,
+        },
+      },
+    },
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    },
   },
   -- no config needed plugins
   { "chaoren/vim-wordmotion" }, -- More useful word motions for Vim

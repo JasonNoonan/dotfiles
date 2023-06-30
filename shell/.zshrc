@@ -39,4 +39,6 @@ alias lt='exa -aT --icons --color=always --group-directories-first'
 . "$(brew --prefix asdf)/libexec/asdf.sh"
 . "$HOME/.cargo/env"
 
+eval "$(direnv hook zsh)"
+
 tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
