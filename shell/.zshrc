@@ -10,6 +10,8 @@ fi
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
+tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 autoload -Uz compinit && compinit
@@ -55,5 +57,6 @@ plugins=(vi-mode)
 
 eval "$(direnv hook zsh)"
 
-tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
