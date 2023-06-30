@@ -36,6 +36,14 @@ alias la='exa -al --icons --color=always --group-directories-first'
 alias ll='exa -l --icons --color=always --group-directories-first'
 alias lt='exa -aT --icons --color=always --group-directories-first'
 
+# fzf
+function fgo() {
+  target=$(command ls -d ~/* ~/workspace/* ~/.config/* | fzf --preview "exa --tree --icons --level=3 --git-ignore {}")
+
+  cd $target
+  nvim
+}
+
 . "$(brew --prefix asdf)/libexec/asdf.sh"
 . "$HOME/.cargo/env"
 

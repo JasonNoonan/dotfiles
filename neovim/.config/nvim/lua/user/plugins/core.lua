@@ -113,7 +113,7 @@ return {
   },
   { "rcarriga/nvim-notify", opts = {
     background_colour = "#000",
-    top_down = true,
+    top_down = false,
     timeout = 2000,
   } },
 }
