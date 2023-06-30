@@ -1,3 +1,8 @@
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,12 +10,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -56,7 +56,3 @@ plugins=(vi-mode)
 . "$HOME/.cargo/env"
 
 eval "$(direnv hook zsh)"
-
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
