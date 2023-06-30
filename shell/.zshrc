@@ -36,6 +36,9 @@ alias la='exa -al --icons --color=always --group-directories-first'
 alias ll='exa -l --icons --color=always --group-directories-first'
 alias lt='exa -aT --icons --color=always --group-directories-first'
 
+# source this file
+alias zso='source $HOME/.zshrc && source $HOME/.zshenv'
+
 # fzf
 function fgo() {
   target=$(command ls -d ~/* ~/workspace/* ~/.config/* ~/dots | fzf --preview "exa --tree --icons --level=3 --git-ignore {}")
@@ -44,9 +47,13 @@ function fgo() {
   nvim
 }
 
+# vim keybindings for zsh
+plugins=(vi-mode)
+
 . "$(brew --prefix asdf)/libexec/asdf.sh"
 . "$HOME/.cargo/env"
 
 eval "$(direnv hook zsh)"
 
 tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
