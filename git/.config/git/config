@@ -15,6 +15,7 @@
 	branches = "!git --no-pager branch --format '%(refname:short)' --sort=-committerdate | fzf --preview 'git log --color=always --decorate {}'" 
 	co = checkout
 	cob = checkout -b
+	drop = "!git branch -d $(git branches)"
 	force = push --force-with-lease
 	gap = commit -a --amend --no-edit && git push --force-with-lease
 	s = status

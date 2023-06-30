@@ -17,3 +17,5 @@ source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export MANPAGER="nvim +Man!"
+
+export FZF_DEFAULT_OPTS="--reverse --color=bg+:-1,fg:15,fg+:-1,prompt:6,header:5,pointer:2,hl:3,hl+:3,spinner:05,info:15,border:15"

@@ -38,7 +38,7 @@ alias lt='exa -aT --icons --color=always --group-directories-first'
 
 # fzf
 function fgo() {
-  target=$(command ls -d ~/* ~/workspace/* ~/.config/* | fzf --preview "exa --tree --icons --level=3 --git-ignore {}")
+  target=$(command ls -d ~/* ~/workspace/* ~/.config/* ~/dots | fzf --preview "exa --tree --icons --level=3 --git-ignore {}")
 
   cd $target
   nvim
