@@ -39,6 +39,16 @@ alias lt='exa -aT --icons --color=always --group-directories-first'
 # source this file
 alias zso='source $HOME/.zshrc && source $HOME/.zshenv'
 
+# elixir aliases
+alias ips="iex --no-pry -S mix phx.server"
+alias mco="mix coveralls"
+alias mcoh="mix coveralls.html"
+alias mdl="mix dialyzer"
+alias mcr="mix credo --strict"
+alias mdc="mix deps.compile"
+alias mdg="mix deps.get"
+alias mes="mix ecto.setup"
+
 # fzf
 function fgo() {
   target=$(command ls -d ~/* ~/workspace/* ~/.config/* ~/dots | fzf --preview "exa --tree --icons --level=3 --git-ignore {}")
