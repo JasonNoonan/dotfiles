@@ -49,6 +49,8 @@ alias mdc="mix deps.compile"
 alias mdg="mix deps.get"
 alias mes="mix ecto.setup"
 
+alias serve="static -a 0.0.0.0 -p 8000" # simple static HTML server
+
 # fzf
 function fgo() {
   target=$(command ls -d ~/* ~/workspace/* ~/.config/* ~/dots | fzf --preview "exa --tree --icons --level=3 --git-ignore {}")
