@@ -40,7 +40,7 @@ alias lt='exa -aT --icons --color=always --group-directories-first'
 alias zso='source $HOME/.zshrc && source $HOME/.zshenv'
 
 # elixir aliases
-alias ips="iex --no-pry -S mix phx.server"
+alias ips="iex -S mix phx.server"
 alias mco="mix coveralls"
 alias mcoh="mix coveralls.html"
 alias mdl="mix dialyzer"
