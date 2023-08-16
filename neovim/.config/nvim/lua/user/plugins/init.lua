@@ -118,6 +118,7 @@ return {
 		dependencies = {
 			"tpope/vim-dispatch",
 		},
+		event = "VimEnter",
 		config = function()
 			vim.g["test#strategy"] = {
 				nearest = "toggleterm",
@@ -213,6 +214,15 @@ return {
 				"<cmd>DBUI<cr>",
 				{ description = "start the dadbod UI" },
 			},
+		},
+	},
+	{
+		"tpope/vim-fugitive",
+		dependencies = { "tpope/vim-rhubarb" },
+		event = "VimEnter",
+		keys = {
+			{ "<leader><leader>gl", ":Gclog<CR>", { description = "git log" } },
+			{ "<leader><leader>gh", ":0Gclog<CR>", { description = "git history for current file" } },
 		},
 	},
 	{
