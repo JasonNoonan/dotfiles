@@ -250,6 +250,13 @@ return {
 			"rcarriga/nvim-notify",
 		},
 	},
+	{
+		"iamcco/markdown-preview.nvim",
+		event = "BufRead",
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
 	-- no config needed plugins
 	{ "chaoren/vim-wordmotion" }, -- More useful word motions for Vim
 	{ "andymass/vim-matchup" }, -- vim match-up: even better % 👊 navigate and highlight matching words 👊 modern matchit and matchparen
