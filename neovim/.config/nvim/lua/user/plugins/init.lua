@@ -126,6 +126,7 @@ return {
 				suite = "toggleterm",
 			}
 			vim.g["preserve_screen"] = true
+			vim.g["test#csharp#runner"] = "dotnettest"
 		end,
 		keys = {
 			{ "<leader>tt", "<cmd>TestFile<cr>", { desc = "run test for whole file" } },
