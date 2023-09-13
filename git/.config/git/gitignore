@@ -2,3 +2,4 @@
 ~/.config/nvim/.luarc.json
 json_queries
 .envrc
+json_notes.md
