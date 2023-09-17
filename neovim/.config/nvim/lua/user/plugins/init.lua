@@ -17,7 +17,7 @@ return {
 				sandwich = true,
 				semantic_tokens = true,
 				symbols_outline = true,
-				telescope = true,
+				telescope = { enabled = true },
 				which_key = true,
 			},
 		},
