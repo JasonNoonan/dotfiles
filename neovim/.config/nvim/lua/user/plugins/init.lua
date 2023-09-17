@@ -21,9 +21,9 @@ return {
 				which_key = true,
 			},
 		},
-		config = function()
+		config = function(_, opts)
 			vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-			require("catppuccin").setup()
+			require("catppuccin").setup(opts)
 		end,
 		lazy = false,
 		priority = 1000,
