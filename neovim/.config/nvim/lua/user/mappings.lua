@@ -8,8 +8,6 @@ return {
 	n = {
 		-- second key is the lefthand side of the map
 		-- hop.nvim
-		["<leader><leader>w"] = { "<cmd>HopWord<cr>", desc = "Hop to a word" },
-		["<leader><leader>p"] = { "<cmd>HopPattern<cr>", desc = "Hop to a pattern" },
 		["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
 		["<leader>gd"] = { "<cmd>DiffviewOpen<cr>", desc = "View git diff in Diffview" },
 		["<leader>gdc"] = { "<cmd>DiffviewClose<cr>", desc = "Close Diffview" },

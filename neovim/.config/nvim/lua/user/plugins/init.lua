@@ -34,8 +34,12 @@ return {
 		config = function()
 			require("hop").setup()
 		end,
+		keys = {
+			{ "<leader><leader>w", "<cmd>HopWord<cr>", desc = "Hop to a word" },
+			{ "<leader><leader>p", "<cmd>HopPattern<cr>", desc = "Hop to a pattern" },
+		},
 		module = "hop",
-		opt = true,
+		opts = true,
 		setup = function()
 			table.insert(astronvim.file_plugins, "hop.nvim")
 		end,
