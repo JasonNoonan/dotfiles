@@ -1,4 +1,4 @@
-export PATH="/opt/homebrew/opt/dotnet@6/bin:$HOME/.local/bin:$PATH"
+export PATH="/Users/jasonnoonan/.dotnet:$HOME/.local/bin:$PATH"
 export ASPNETCORE_ENVIRONMENT="Development"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
