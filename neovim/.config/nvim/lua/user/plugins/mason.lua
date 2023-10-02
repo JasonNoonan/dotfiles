@@ -37,28 +37,26 @@ return {
 			handlers = {
 				coreclr = function(_)
 					local dap = require("dap")
+					dap.set_log_level("DEBUG")
+
 					dap.adapters.coreclr = {
 						type = "executable",
 						command = "/usr/local/bin/netcoredbg",
-						args = { "--interpreter=vscode" },
+						args = { "--interpreter=vscode", "--engineLogging=dap_log.txt" },
 					}
 
 					dap.configurations.cs = {
 						{
 							type = "coreclr",
-							name = "launch - netcoredbg",
+							name = "launch - Janus.Web",
 							request = "launch",
-							preLaunchTask = "build",
-							program = "~/workspace/janus/src/Janus.Web/bin/Debug/net6.0/Janus.Web.dll",
-							cwd = "~/workspace/janus/src/Janus.Web",
-							stopAtEntry = false,
-							serverReadyAction = {
-								action = "openExternally",
-								pattern = "^\\s*Now listening on:\\s+(https?://\\S+)",
-							},
-							env = {
-								ASPNETCORE_ENVIRONMENT = "Development",
-							},
+							program = function()
+								return vim.fn.input({
+									prompt = "Path to dll: ",
+									default = vim.fn.getcwd(),
+									completion = "file",
+								})
+							end,
 						},
 					}
 				end,
@@ -84,6 +82,13 @@ return {
 								"test/**/test_helper.exs",
 								"test/**/*_test.exs",
 							},
+						},
+						{
+							type = "mix_task",
+							name = "phx.server",
+							request = "launch",
+							task = "phx.server",
+							projectDir = "/Users/jasonnoonan/workspace/portal.pdq.com",
 						},
 					}
 				end,
