@@ -1,3 +1,5 @@
+tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -67,5 +69,4 @@ plugins=(vi-mode)
 
 eval "$(direnv hook zsh)"
 
-tput setaf ${$(( ( RANDOM % 6 ) + 1 ))} && printf "%*s\n" $(((${#title}+$COLUMNS)/2)) "EYES UP, GUARDIAN"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
