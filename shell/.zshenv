@@ -1,4 +1,4 @@
-export PATH="/Users/jasonnoonan/.dotnet:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/nvim-macos/bin:$HOME/.dotnet:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 export ASPNETCORE_ENVIRONMENT="Development"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
