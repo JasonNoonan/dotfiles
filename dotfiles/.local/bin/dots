@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ~/dots/
+cd ~/workspace/dotfiles/
 case $1 in
   install) brew bundle;;
   config) stow */ -t $HOME --no-folding;;

@@ -41,7 +41,7 @@ return {
 
 					dap.adapters.coreclr = {
 						type = "executable",
-						command = "/usr/local/bin/netcoredbg",
+						command = "/usr/local/netcoredbg",
 						args = { "--interpreter=vscode", "--engineLogging=dap_log.txt" },
 					}
 
@@ -88,7 +88,9 @@ return {
 							name = "phx.server",
 							request = "launch",
 							task = "phx.server",
-							projectDir = "/Users/jasonnoonan/workspace/portal.pdq.com",
+							projectDir = function()
+								return vim.fn.getcwd()
+							end,
 						},
 					}
 				end,
