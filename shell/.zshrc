@@ -74,3 +74,4 @@ plugins=(vi-mode)
 eval "$(direnv hook zsh)"
 
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+source ~/workspace/fzf-tab/fzf-tab.plugin.zsh
