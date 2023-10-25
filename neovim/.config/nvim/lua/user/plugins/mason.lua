@@ -77,7 +77,7 @@ return {
 							taskArgs = { "--trace" },
 							request = "launch",
 							startApps = true, -- for Phoenix projects
-							projectDir = "${workspaceFolder}",
+							projectDir = ".",
 							requireFiles = {
 								"test/**/test_helper.exs",
 								"test/**/*_test.exs",
@@ -88,7 +88,14 @@ return {
 							name = "phx.server",
 							request = "launch",
 							task = "phx.server",
-							projectDir = "/Users/jasonnoonan/workspace/portal.pdq.com",
+							projectDir = ".",
+						},
+						{
+							type = "mix_task",
+							name = "run",
+							request = "launch",
+							task = "run",
+							projectDir = ".",
 						},
 					}
 				end,
