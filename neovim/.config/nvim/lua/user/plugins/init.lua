@@ -28,6 +28,13 @@ return {
 		lazy = false,
 		priority = 1000,
 	},
+	{
+		"embark-theme/vim",
+		name = "embark",
+		config = function()
+			vim.g.embark_terminal_italics = true
+		end,
+	},
 	{ -- Neovim motions on speed!
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended,
