@@ -241,6 +241,10 @@ return {
 				hover = {
 					enabled = false,
 				},
+				message = {
+					enabled = true,
+					view = "notify",
+				},
 			},
 		},
 		opts = {

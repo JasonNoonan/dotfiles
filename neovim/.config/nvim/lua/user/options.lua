@@ -8,6 +8,7 @@
 --
 --   return local_vim
 -- end,
+-- vim.lsp.set_log_level("DEBUG")
 return {
 	opt = {
 		-- set to true or false etc.
