@@ -1,5 +1,6 @@
 return {
-	colorscheme = "catppuccin",
+	-- colorscheme = "catppuccin",
+	colorscheme = "embark",
 	updater = {
 		remote = "origin", -- remote to use
 		channel = "stable", -- "stable" or "nightly"
