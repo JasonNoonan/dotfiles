@@ -31,6 +31,7 @@ return {
 	{
 		"embark-theme/vim",
 		name = "embark",
+		-- branch = "underline-support",
 		config = function()
 			vim.g.embark_terminal_italics = true
 		end,
