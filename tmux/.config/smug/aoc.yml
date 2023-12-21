@@ -1,0 +1,15 @@
+session: PORTAL
+root: ~/workspace/aoc/2023/elixir
+
+windows:
+  - name: " "
+    commands:
+      - nvim
+  - name: " "
+    commands:
+      - nvim scratchpad.ex
+    layout: main-horizontal
+    panes:
+      - type: horizontal
+        commands:
+          - iex -S mix

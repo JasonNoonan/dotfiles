@@ -65,6 +65,14 @@ function fgo() {
   nvim
 }
 
+function w() {
+  fd $1 | entr -c "''${@:2}"
+}
+
+function ew() {
+  fd "\.exs?$" | entr -c "$@"
+}
+
 # vim keybindings for zsh
 plugins=(vi-mode)
 
