@@ -1,0 +1,25 @@
+session: PORTAL
+root: ~/workspace/portal
+
+before_start:
+  - docker-compose up -d
+
+stop:
+  - docker-compose stop
+
+windows:
+  - name: " "
+    commands:
+      - nvim
+  - name: " "
+    commands:
+      - nvim scratchpad.ex
+    layout: main-horizontal
+    panes:
+      - type: horizontal
+        commands:
+          - ips
+
+  - name: " "
+    commands:
+      - nvim +DBUI
