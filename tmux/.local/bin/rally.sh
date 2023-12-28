@@ -1,5 +1,5 @@
 set -eu
-TARGET=$(ls -d ~/workspace/* ~/* | fzf --header-first --header="Launch Project" --prompt="🔮 " --preview 'eza --tree --icons --color=always --level 3 --git-ignore {}')
+TARGET=$(ls -d ~/workspace/* ~/* | fzf --header-first --header="Launch Project" --prompt="🗡️  " --preview 'eza --tree --icons --color=always --level 3 --git-ignore {}')
 NAME=$(basename $TARGET)
 SESSION_NAME=$(echo $NAME | tr [:lower:] [:upper:])
 
