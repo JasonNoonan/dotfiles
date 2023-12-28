@@ -3,7 +3,7 @@ background: "#1E1C31"
 details: darker
 foreground: "#CBE3E7"
 terminal_colors:
-  bright:
+  normal:
     black: "#1E1C31"
     blue: "#91DDFF"
     cyan: "#ABF8F7"
@@ -12,7 +12,7 @@ terminal_colors:
     red: "#F48FB1"
     white: "#CBE3E7"
     yellow: "#FFE6B3"
-  normal:
+  bright:
     black: "#585273"
     blue: "#78A8FF"
     cyan: "#63F2F1"

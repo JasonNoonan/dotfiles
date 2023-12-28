@@ -2,7 +2,7 @@ session: PORTAL
 root: ~/workspace/aoc/2023/elixir
 
 windows:
-  - name: " "
+  - name: " "
     commands:
       - nvim
   - name: " "
