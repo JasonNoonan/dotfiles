@@ -7,6 +7,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_SILENT
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
@@ -52,6 +56,12 @@ alias mdg="mix deps.get"
 alias mes="mix ecto.setup"
 
 alias serve="static -a 0.0.0.0 -p 8000" # simple static HTML server
+
+alias rm="trash-put -v"
+alias cp="cp -iv"
+alias mv="mv -iv"
+
+cdpath=(. $HOME/.config $HOME/workspace)
 
 # fzf
 function fgo() {
